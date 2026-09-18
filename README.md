@@ -1,5 +1,7 @@
 # ETL — PIB Mundial (Extracción, Transformación y Carga)
 
+## Descripción
+
 Script de Python que ejecuta un proceso ETL completo sobre la lista de países por PIB nominal, tomando como fuente una captura de [Wikipedia en Web Archive](https://web.archive.org/web/20230902185326/https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28nominal%29).
 
 ## Pipeline
@@ -15,6 +17,16 @@ Script de Python que ejecuta un proceso ETL completo sobre la lista de países p
 - `etl.py` — script con las funciones `extraer`, `transformar`, `cargar_a_csv`, `cargar_a_db`, `consultar` y `log_progress`.
 - `Countries_by_GDP.csv` — salida del proceso.
 - `Pipfile` — dependencias del entorno.
+
+## Diagrama
+
+[Explorar la arquitectura interactiva en GitDiagram](https://gitdiagram.com/HoracioLaphitz/ETL)
+
+```mermaid
+flowchart LR
+  A["Countries_by_GDP.csv + Pipfile + Pipfile.lock"] --> B["Procesamiento de ETL"]
+  B --> C["Resultados del proyecto"]
+```
 
 ## Tecnologías
 
